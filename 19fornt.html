@@ -3,22 +3,10 @@
     <meta charset="UTF-8">
     <title>19project</title>
     <STYLE>
-        html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed, 
-        figure, figcaption, footer, header, hgroup, 
-        menu, nav, output, ruby, section, summary,
-        time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
+        html, body{
+            width: 1250px;
+            height: 100%;
+            margin: auto;
         }
         .userArea{
             background-color: #aeffb5;
@@ -41,24 +29,15 @@
             top: 0px;
             right: 130px;
         }
-        .frontImg{
-            display: flex;
-            justify-content: center;
-        }
         #navBar{
-            position: relative;
             background-color: #aeafff;
 	        width: 100%;
 	        height: 35px;
-            top: 71%;
-        }
-        .barScail{
-
+            margin-top: -20px;
+            margin-bottom: 20px;
         }
         .barList{
-            position: relative;
-            height: 25px;
-            
+            height: 35px;
         }
         a {
             text-decoration: none;
@@ -76,13 +55,33 @@
             display: flex;
             margin-right: 50px;
             align-items: center;
-            
         }
          ul li > a{
             text-decoration: none;
             outline: none;
             color : black;
             font-size: 25px;
+        }
+        #groupA.leftSide{
+            width: 300px;
+            height: 100vh;
+            /*css에서 height를 100%로 만들고싶으면 vh사용
+            또한, html, body도 height를 100%로 설정해야함
+            */
+            background-color: aqua;
+            float: left;
+        }
+        #groupB.rightSide{
+            width: 930px;
+            height: 100vh;
+            background-color: bisque;
+            float: right;
+        }
+        .userInfo{
+            width: 300px;
+            height: 400px;
+            background-color: #aeafff;
+            float: top;
         }
     </STYLE>
 </head>
@@ -102,39 +101,49 @@
         </div>
         <div class="frontImg">
             <a href="#">
-                <img src="frontImg.jpg" width="1200" height="500" >
+                <img src="frontImg.jpg" width="1250" height="500" >
             </a>
         </div>
         <div id="navBar" role="navigation">
-            <div class="barScail">
-                <div class="barList">
-                    <ul class="navList">
-                        <li><a href="https://www.naver.com/">구름아이디</a></li>
-                        <li><a href="#">게시판</a></li>
-                        <li><a href="#">스마트렌즈</a></li>
-                        <li><a href="#">공지사항</a></li>
-                    </ul>
-                </div>
+            <div class="barList">
+                <ul class="navList">
+                    <li><a href="https://www.naver.com/">구름아이디</a></li>
+                    <li><a href="#">게시판</a></li>
+                    <li><a href="#">스마트렌즈</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <section>
-        <h1>19project</h1>
-        <p>흥애 우리 만든다 웹사이트 흥애
-            여러 기능을 가진 흥애 웹사이트 흥애
-        </p>
-    </section>
-    <hr>
-    <section>
-        <h3>공지사항</h3>
-        <p></p>
-    </section>
-    <hr>
-    <section>
-        <h3>자유게시판</h3>
-        <p></p>
-    </section>
-    <hr>
+    <div id="body" role="main">
+        <div id="groupA" class="leftSide">
+            <div class="userInfo">
+                
+            </div>
+            <div class="allMenu">
+
+            </div>
+        </div>
+        <div id="groupB" class="rightSide">
+            <section>
+                <h1>19project</h1>
+                <p>흥애 우리 만든다 웹사이트 흥애
+                    여러 기능을 가진 흥애 웹사이트 흥애
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h3>공지사항</h3>
+                <p></p>
+            </section>
+            <hr>
+            <section>
+                <h3>자유게시판</h3>
+                <p></p>
+            </section>
+            <hr>
+        </div>
+    </div>
 </body>
 <aside>
 

@@ -39,26 +39,28 @@
         .barList{
             height: 35px;
         }
-        a {
-            text-decoration: none;
-            outline: none;
+        .userArea > a{
             color : rgb(255, 116, 116);
             font-family: "메이플스토리";
         }
-         ul{
-            list-style: none;
+        .navList > ul{
             display: flex;
             justify-content: flex-start;
         }
-         ul > li{
+        .navList > li{
             float: left;
             display: flex;
             margin-right: 50px;
             align-items: center;
         }
-         ul li > a{
+        ul{
+            list-style: none;
+        }
+        a{
             text-decoration: none;
             outline: none;
+        }
+        .navList li > a{
             color : black;
             font-size: 25px;
         }
@@ -81,7 +83,21 @@
             width: 300px;
             height: 400px;
             background-color: #aeafff;
-            float: top;
+        }
+        .writing{
+            width: 300px;
+            height: 50px;
+            background-color : skyblue;
+            position: relative;
+            top: 350px;
+        }
+        .writing > a{
+            text-decoration: none;
+            outline: none;
+            color : black;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
         }
     </STYLE>
 </head>
@@ -118,10 +134,29 @@
     <div id="body" role="main">
         <div id="groupA" class="leftSide">
             <div class="userInfo">
-                
+                <div class = writing>
+                    <a href="#">글쓰기</a>
+                </div>
             </div>
             <div class="allMenu">
-
+                <hr>
+                <div class="myWriting">
+                    <ul>
+                        <li><a href="#">내가 쓴 글</a></li>
+                        <li><a href="#">좋아요 글</a></li>
+                        <li><a href="#">댓글 단 글</a></li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="allWriting">
+                    <ul>
+                        <li><a href="#">전체글</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">정보게시판</a></li>
+                    </ul>
+                </div>
+                <hr>
             </div>
         </div>
         <div id="groupB" class="rightSide">
